@@ -1,16 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it"></html>
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Esempio di REST API con interfaccia client API</title>
 </head>
 <body>
-    <p>Hello World!</p>
+    <div class="container">
+        <h1>Esempio di REST API con interfaccia client API</h1>
+        <div class="form">
+            <label for="METHOD">METODO</label>
+            <select id="METHOD">
+                <option value="GET">GET</option>
+                <option value="POST">POST</option>
+                <option value="PUT">PUT</option>
+                <option value="DELETE">DELETE</option>
+            </select>
+            <label for="URL">URL</label>
+            <input type="text" id="URL" placeholder="Inserisci URL" value="/api/persone">
+            <label for="HEADERS">INTESTAZIONI</label>
+            <input type="text" id="HEADERS" placeholder='{"Content-Type": "application/json"}' value='{"Content-Type": "application/json"}'>
+            <label for="BODY">CORPO RICHIESTA</label>
+            <textarea id="BODY" placeholder='{"id": "21", "nome": "Nome", "cognome": "Cognome", "interessi": ["interesse1", "interesse2"]}'></textarea>
+            <button id="sendBtn">INVIA</button>
+        </div>
+        <div class="response">
+            <h2>Risposta</h2>
+            <div id="response"></div>
+        </div>
+    </div>
 
-
-     <script src="../index.js"></script>
+    <script src="./client.js"></script>
 </body>
 </html>
